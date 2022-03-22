@@ -77,7 +77,7 @@ function createTable() {
     return table;
 }
 
-//
+//adding mouse events
 function addCellListeners(td, i, j) {
     td.addEventListener('mousedown', function(event) {
         if (!components.alive) {
