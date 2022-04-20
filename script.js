@@ -66,7 +66,7 @@ function createTable() {
     
     for (i=0; i<components.num_of_rows; i++) {
         row = document.createElement('tr');
-        for (j=0; j<components.num_of_cols; j++) {
+       for (j=0; j<components.num_of_cols; j++) { 
             td = document.createElement('td');
             td.id = cellID(i, j);
             row.appendChild(td);
@@ -212,7 +212,7 @@ function clickAdjacentBombs(row, col) {
 }
 
 function performMassClick(cell, row, col) {
-    if (adjacentFlags(row, col) === adjacentBombs(row, col)) {
+    if (adjacentFlags(row, col) === adjacentBombs(row, col)) { //read in dept about it
         clickAdjacentBombs(row, col);
     }
 }
@@ -221,7 +221,6 @@ function performMassClick(cell, row, col) {
 function gameOver() {
     components.alive = false;
     document.getElementById('lost').style.display="block";
-    
 }
 
 //reload the page 
